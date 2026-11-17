@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "sameVendorFallback": ["review"],
+  "roles": {
+    "orchestrate": [{"provider":"claudeAgent","model":"claude-opus-5-5","effort":"medium"},{"provider":"codex","model":"gpt-6.1-sol","effort":"high"}],
+    "build-backend": [{"provider":"codex","model":"gpt-6.1-sol","effort":"medium"},{"provider":"antigravity","model":"gemini-4-hydrogen","effort":"high"}],
+    "build-frontend": [{"provider":"antigravity","model":"gemini-4-hydrogen","effort":"high"},{"provider":"codex","model":"gpt-6.1-sol","effort":"high"}],
+    "mechanical": [{"provider":"codex","model":"gpt-6.1-sol","effort":"low"}],
+    "review": [{"provider":"codex","model":"gpt-6.1-sol","effort":"high"},{"provider":"antigravity","model":"gemini-4-argon","effort":"high"}],
+    "review-high-risk": [{"provider":"claudeAgent","model":"claude-opus-5-5","effort":"high"},{"provider":"codex","model":"gpt-6.1-sol","effort":"xhigh"}]
+  },
+  "disabled": {"gemini-4-argon":{"until":"2026-11-20","reason":"示例"}}
+}
