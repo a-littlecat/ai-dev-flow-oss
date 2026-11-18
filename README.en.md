@@ -44,15 +44,13 @@ The rules are written in Chinese. Modern coding agents read them fine in any con
 
 ## Install
 
-Copy `skills/ai-dev-flow` and `skills/next` into `~/.agents/skills/` (Codex user skills). For Claude Code, link them into `~/.claude/skills/`:
+Tell Claude Code or Codex:
 
-```powershell
-foreach ($n in 'ai-dev-flow', 'next') {
-    New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\$n" -Target "$env:USERPROFILE\.agents\skills\$n"
-}
+```
+Install ai-dev-flow following <repo-url>/blob/main/INSTALL.md
 ```
 
-Optional: phone push via Bark (`%APPDATA%\ai-dev-flow\notify.json`, only for items that need you); a Claude Code `Notification` hook calling `scripts/notify.ps1 -Hook`; a scheduled task running `scripts/watch.ps1` every 15 minutes for the idle-time full test run.
+The agent checks your environment, copies the files, links them into Claude Code, and confirms the install. It asks before overwriting anything already there, and asks you once about the optional extras: phone push, permission-prompt notifications, and a background full test run. The steps are in [INSTALL.md](INSTALL.md) if you prefer to install by hand. Use the same sentence to upgrade.
 
 Scripts require Windows and PowerShell 7. The rules themselves are platform-neutral.
 

@@ -61,19 +61,13 @@ tests/                  脚本的测试，pwsh -NoProfile -File tests/run-all.ps
 
 ## 安装
 
-把 `skills/` 下的 `ai-dev-flow`、`next` 复制到 `~/.agents/skills/`（Codex 的用户级 skill 目录）。Claude Code 用目录链接指向同一份：
+在 Claude Code 或 Codex 里说一句：
 
-```powershell
-foreach ($n in 'ai-dev-flow', 'next') {
-    New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\$n" -Target "$env:USERPROFILE\.agents\skills\$n"
-}
+```
+按 <仓库地址>/blob/main/INSTALL.md 安装 ai-dev-flow
 ```
 
-可选：
-
-- 推到手机：本机写 `%APPDATA%\ai-dev-flow\notify.json`（不入库）`{ "bark": "https://api.day.app/<key>", "barkLevels": ["user", "stuck"] }`，只推要你决定或出手的。
-- 会话等权限时弹通知：`~/.claude/settings.json` 的 `hooks.Notification` 加 `pwsh -NoProfile -File <skill 完整路径>/scripts/notify.ps1 -Hook`。
-- 合并后后台全量：计划任务每 15 分钟跑 `conhost.exe --headless <pwsh 完整路径> -NoProfile -File <skill>/scripts/watch.ps1 -Config <总览>\projects.json`。
+AI 编程助手会检查环境，复制文件，接上 Claude Code，再确认装好。遇到已有文件不会直接覆盖，先问你。手机推送、权限通知、后台全量测试这几个可选功能也一次问你要不要。步骤见 [INSTALL.md](INSTALL.md)，想自己装就照着做。升级也用同一句话。
 
 只在 Windows + PowerShell 7 上用。
 
