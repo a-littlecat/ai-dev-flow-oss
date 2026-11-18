@@ -64,7 +64,7 @@ tests/                  脚本的测试，pwsh -NoProfile -File tests/run-all.ps
 在 Claude Code 或 Codex 里说一句：
 
 ```
-按 <仓库地址>/blob/main/INSTALL.md 安装 ai-dev-flow
+按 https://github.com/a-littlecat/ai-dev-flow-oss/blob/main/INSTALL.md 安装 ai-dev-flow
 ```
 
 AI 编程助手会检查环境，复制文件，接上 Claude Code，再确认装好。遇到已有文件不会直接覆盖，先问你。手机推送、权限通知、后台全量测试这几个可选功能也一次问你要不要。步骤见 [INSTALL.md](INSTALL.md)，想自己装就照着做。升级也用同一句话。

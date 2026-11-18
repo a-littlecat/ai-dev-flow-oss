@@ -47,7 +47,7 @@ The rules are written in Chinese. Modern coding agents read them fine in any con
 Tell Claude Code or Codex:
 
 ```
-Install ai-dev-flow following <repo-url>/blob/main/INSTALL.md
+Install ai-dev-flow following https://github.com/a-littlecat/ai-dev-flow-oss/blob/main/INSTALL.md
 ```
 
 The agent checks your environment, copies the files, links them into Claude Code, and confirms the install. It asks before overwriting anything already there, and asks you once about the optional extras: phone push, permission-prompt notifications, and a background full test run. The steps are in [INSTALL.md](INSTALL.md) if you prefer to install by hand. Use the same sentence to upgrade.
